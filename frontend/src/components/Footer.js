@@ -5,9 +5,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 const Footer = () => {
   return (
     <Container>
-      
-      <footer>my Footer</footer>
-
+      <Row>
+        <Col className='text-center py-3'>
+          Copyright &copy;
+        </Col>
+      </Row>
     </Container>
   )
 }
