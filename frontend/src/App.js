@@ -7,7 +7,9 @@ function App() {
     <>
       <Header />
       <main>
-        <h1>Welcome to ProShop</h1>
+        <Container>
+          <h1>Welcome to ProShop</h1>
+        </Container>
       </main>
       <Footer />
     </>
