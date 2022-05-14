@@ -16,8 +16,8 @@ const Header = () => {
                 </i>
               </Nav.Link>
               <Nav.Link href="/login">
-                <i className='fas fa-shopping-cart'>
-                  Cart
+                <i className='fas fa-user'>
+                  Sign In
                 </i>
               </Nav.Link>
             </Nav>
