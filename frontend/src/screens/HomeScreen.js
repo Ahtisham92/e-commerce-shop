@@ -11,7 +11,9 @@ const HomeScreen = () => {
           products.map(product => {
             return <Col>
               <h2>{product.name}</h2>
+              <h5>{product.brand}</h5>
               <p>{product.description}</p>
+
             </Col>
           })  
         }
