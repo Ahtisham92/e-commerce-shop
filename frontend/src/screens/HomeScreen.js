@@ -16,7 +16,6 @@ const HomeScreen = () => {
               <p>{product.price}</p>
               <p>{product.description}</p>
               <p>{product.numReviews}</p>
-              <p>{product.countInStock}</p>
             </Col>
           })  
         }
