@@ -14,7 +14,6 @@ const HomeScreen = () => {
               <h5>{product.brand}</h5>
               <h6>{product.category}</h6>
               <p>{product.price}</p>
-              <p>{product.description}</p>
             </Col>
           })  
         }
