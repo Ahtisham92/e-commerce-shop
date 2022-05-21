@@ -1,4 +1,5 @@
 import React from 'react'
+import { propTypes } from 'react-bootstrap/esm/Image'
 
 
 const Rating = ({value, text, color }) => {
@@ -63,5 +64,10 @@ Rating.defaultProps = {
   color: '#f8e825'
 }
 
+Rating.propTypes = {
+  value: propTypes.number.required,
+  text: propTypes.string.required,
+  color: propTypes.string,
+}
 
 export default Rating
