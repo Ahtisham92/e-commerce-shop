@@ -15,6 +15,11 @@ const Product = ({ product }) => {
             <Card.Title as='div'>{product.name}</Card.Title>
           </a>
 
+          <Card.Text as='div'>
+            <div className=''>
+              {product.rating} from {product.numReviews} reviews
+            </div>
+          </Card.Text>
           
         </Card.Body>
 
