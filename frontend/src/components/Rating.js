@@ -49,10 +49,8 @@ const Rating = ({value, text, color }) => {
         }
         ></i>
       </span>
-
-      <span>
-        {text}
-      </span>
+      {/* Render number of reviews */}
+      <span>{text}</span>
 
     </div>
   )
