@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-const Rating = ({value, text }) => {
+const Rating = ({value, text, color }) => {
 
   console.log(value)
   return (
     <div>
       <span>
-        <i
+        <i style={{color}}
           className={value >= 1? 'fa-solid fa-star' : 
           value >= 0.5? 'fa-solid fa-star-half-stroke' :
           'far fa-star'
@@ -16,7 +16,7 @@ const Rating = ({value, text }) => {
       </span>
       
       <span>
-        <i
+        <i style={{color}}
           className={value >= 2? 'fa-solid fa-star' : 
           value >= 1.5? 'fa-solid fa-star-half-stroke' :
           'far fa-star'
@@ -25,7 +25,7 @@ const Rating = ({value, text }) => {
       </span>
       
       <span>
-        <i
+        <i style={{color}}
           className={value >= 3? 'fa-solid fa-star' : 
           value >= 2.5? 'fa-solid fa-star-half-stroke' :
           'far fa-star'
@@ -34,7 +34,7 @@ const Rating = ({value, text }) => {
       </span>
       
       <span>
-        <i
+        <i style={{color}}
           className={value >= 4? 'fa-solid fa-star' : 
           value >= 3.5? 'fa-solid fa-star-half-stroke' :
           'far fa-star'
@@ -43,7 +43,7 @@ const Rating = ({value, text }) => {
       </span>
       
       <span>
-        <i
+        <i style={{color}}
           className={value >= 5? 'fa-solid fa-star' : 
           value >= 4.5? 'fa-solid fa-star-half-stroke' :
           'far fa-star'
@@ -59,6 +59,9 @@ const Rating = ({value, text }) => {
   )
 }
 
+Rating.defaultProps = {
+  color: '#f8e825'
+}
 
 
 export default Rating
