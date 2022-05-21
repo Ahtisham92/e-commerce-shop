@@ -1,6 +1,8 @@
 import React from 'react'
 import products from '../products'
 import {Col, Row} from 'react-bootstrap'
+import Product from '../components/Product'
+
 
 const HomeScreen = () => {
   return (
@@ -9,10 +11,8 @@ const HomeScreen = () => {
       <Row>
         {
           products.map(product => {
-            return <Col>
-              <h2>{product.name}</h2>
-              <h5>{product.brand}</h5>
-              <h6>{product.category}</h6>
+            return <Col sm={12} md={6} lg={3} xl={2}>
+              <Product product={product} />
             </Col>
           })  
         }
