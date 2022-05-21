@@ -12,7 +12,9 @@ const Product = ({ product }) => {
 
         <Card.Body>
           <a href={`/product/${product._id}`}>
-            <Card.Title as='div'>{product.name}</Card.Title>
+            <Card.Title as='div'>
+              <strong>{product.name}</strong>
+            </Card.Title>
           </a>
 
           <Card.Text as='div'>
@@ -20,12 +22,10 @@ const Product = ({ product }) => {
               {product.rating} from {product.numReviews} reviews
             </div>
           </Card.Text>
-          
 
           <Card.Text as='h3'>${product.price}</Card.Text>
 
         </Card.Body>
-
       </Card>
     )
 }
