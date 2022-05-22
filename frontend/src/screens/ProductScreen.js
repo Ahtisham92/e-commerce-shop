@@ -43,7 +43,13 @@ const ProductScreen = () => {
           </ListGroup>
         </Col>
 
-      
+        <Col md={3}>
+          <Card>
+            <ListGroup variant='flush'>
+
+            </ListGroup>
+          </Card>
+        </Col>
 
       </Row>
     </>
