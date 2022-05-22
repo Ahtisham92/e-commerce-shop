@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import products from '../products'
+import Rating from '../components/Rating'
 import Product from '../components/Product'
 
 const ProductScreen = () => {
@@ -25,11 +26,25 @@ const ProductScreen = () => {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              
+              <Rating 
+                value={product.rating}
+                text={`${product.numReviews} reviews`}
+              />
+            </ListGroup.Item>
+            
+            <ListGroup.Item>
+              Price: ${product.price}
+            </ListGroup.Item>
+
+            <ListGroup.Item>
+              {product.description}
             </ListGroup.Item>
 
           </ListGroup>
         </Col>
+
+      
+
       </Row>
     </>
   )
