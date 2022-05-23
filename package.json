@@ -1,0 +1,22 @@
+{
+  "name": "e-commerce-shop",
+  "version": "1.0.0",
+  "description": "MERN shopping cart app",
+  "main": "server.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahtisham92/e-commerence-shop.git"
+  },
+  "author": "Ahtisham ul haq",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ahtisham92/e-commerence-shop/issues"
+  },
+  "homepage": "https://github.com/Ahtisham92/e-commerence-shop#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
