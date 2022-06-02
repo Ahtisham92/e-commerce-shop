@@ -18,6 +18,15 @@ const importData = async () => {
     await Order.deleteMany()
     await User.deleteMany()
     await Product.deleteMany()
+
+    const createdUsers = await User.insertMany(users)
+
+    const adminUser = createdUsers[0]._id
+
+    const sampleProducts = products.map(product => {
+      return {...product, adminUser}
+    })
+
   } catch (error) {
 
   }
