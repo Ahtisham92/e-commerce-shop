@@ -18,13 +18,13 @@ const importData = async () => {
     await Order.deleteMany()
     await User.deleteMany()
     await Product.deleteMany()
-
+  
     const createdUsers = await User.insertMany(users)
-
+  
     const adminUser = createdUsers[0]._id
-
+  
     const sampleProducts = products.map(product => {
-      return {...product, adminUser}
+      return {...product, user:  adminUser}
     })
 
     await Product.insertMany(sampleProducts)
@@ -33,7 +33,7 @@ const importData = async () => {
     process.exit()
   } catch (error) {
     console.log(`${error}`.red.inverse)
-    exit(1)
+    process.exit(1)
   }
 }
 
@@ -48,7 +48,7 @@ const destroyData = async () => {
     process.exit()
   } catch (error) {
     console.log(`${error}`.red.inverse)
-    exit(1)
+    process.exit(1)
   }
 }
 
