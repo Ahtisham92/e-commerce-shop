@@ -2,13 +2,13 @@ import express from "express";
 const router = express.Router()
 
 
-app.get('/api/products', (req, res) => {
+app.get('/', (req, res) => {
   res.json(products)
 })
 
 
 
-app.get('/api/products/:id', (req, res) => {
+app.get('/:id', (req, res) => {
   const product = products.find(p => p._id === req.params.id)
   res.json(product)
 })
