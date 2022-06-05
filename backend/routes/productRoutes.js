@@ -18,7 +18,6 @@ router.get('/',  asyncHandler(async (req, res) => {
 // @route   GET /api/products/:id
 // @access  public
 router.get('/:id', asyncHandler( async (req, res) => {
-  // console.log(req.params.id)
   if (req.params.id.match(/^[0-9a-fA-F]{24}$/)) {
     // Yes, it's a valid ObjectId, proceed with `findById` call.
     const product = await Product.findById(req.params.id)
