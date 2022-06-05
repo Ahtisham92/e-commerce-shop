@@ -4,7 +4,9 @@ import Product from  './models/productModel.js'
 import asyncHandler from 'express-async-handler'
 const router = express.Router()
 
-// @desc Fetch all products
+// @desc    Fetch all products
+// @route   GET /api/products
+// @access  public
 route.get('/',  asyncHandler(async (req, res) => {
   const product = await Product.find({})
 
@@ -12,7 +14,9 @@ route.get('/',  asyncHandler(async (req, res) => {
 }))
 
 
-// @desc Fetch only one product based on id.
+// @desc    Fetch only one product based on id.
+// @route   GET /api/products/:id
+// @access  public
 route.get('/:id', asyncHandler( async (req, res) => {
   const product = await Product.find(p => p._id === req.params.id)
   
