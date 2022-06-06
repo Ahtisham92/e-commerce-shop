@@ -18,7 +18,7 @@ router.get('/',  asyncHandler(async (req, res) => {
 // @route   GET /api/products/:id
 // @access  public
 router.get('/:id', asyncHandler( async (req, res) => {
-  if (req.params.id.match(/^[0-9a-fA-F]{24}$/)) {
+  // if (req.params.id.match(/^[0-9a-fA-F]{24}$/)) {
     // Yes, it's a valid ObjectId, proceed with `findById` call.
     const product = await Product.findById(req.params.id)
 
@@ -27,9 +27,9 @@ router.get('/:id', asyncHandler( async (req, res) => {
     } else {
       res.status(404).json({ message: 'Product not found' })
     }
-  } else {
-    res.status(404).json({ message: 'Product not found' })
-  }
+  // } else {
+  //   res.status(404).json({ message: 'Product not found' })
+  // }
   
  
 
