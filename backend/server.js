@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 app.use('/api/products/', productRoutes)
 
 
+app.use(err, req, res, next) {
+  
+}
+
 app.use((err, req, res, next) => {
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
   
