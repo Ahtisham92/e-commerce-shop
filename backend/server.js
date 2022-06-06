@@ -21,8 +21,10 @@ app.get('/', (req, res) => {
 app.use('/api/products/', productRoutes)
 
 
-app.use((err, req, res, next) {
-  
+app.use((req, res, next) => {
+  const error =  new Error(`Not Found - ${req.originalUrl}`)
+  res.status(404)
+  next(error)
 })
 
 app.use((err, req, res, next) => {
