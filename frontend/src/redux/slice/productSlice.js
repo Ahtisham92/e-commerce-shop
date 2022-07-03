@@ -26,7 +26,6 @@ const productSlice = createSlice ({
           return { loading: false, error: action.payload}
         default:
           return state;
-      
       }
     }
   }
